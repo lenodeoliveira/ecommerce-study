@@ -1,6 +1,6 @@
 import { ConflictException, Inject, Injectable } from '@nestjs/common';
 import { IUsecase } from 'src/shared/protocols/usecase/IUsecase';
-import { CreateCustomerInPut } from './customer.types';
+import { CreateCustomerInPut, CustomerOutPut } from './customer.types';
 import { ICustomerRepository } from 'src/modules/customers/infra/typeorm/interface/customers/ICustomers';
 
 @Injectable()
@@ -9,7 +9,7 @@ export class CreateCustomerUseCase implements IUsecase {
     @Inject('CustomerRepositoryDB')
     private readonly customerRepository: ICustomerRepository,
   ) {}
-  public async exec(input: CreateCustomerInPut): Promise<any> {
+  public async exec(input: CreateCustomerInPut): Promise<CustomerOutPut> {
     const customerExists = await this.customerRepository.findByEmail(
       input?.email,
     );
