@@ -1,5 +1,5 @@
 import { CustomerDTO } from 'src/modules/customers/dto/customer.dto';
-import { Customer } from '../../entities/customer.entity';
+import { Customer } from '../../../../../../shared/infra/typeorm/entities/customer.entity';
 
 interface ICustomerRepository {
   createCustomer(data: CustomerDTO): Promise<Customer>;

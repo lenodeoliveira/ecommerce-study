@@ -3,8 +3,8 @@ import { CustomersModule } from 'src/modules/customers/customer.module';
 import { Test } from '@nestjs/testing';
 import { INestApplication, ValidationPipe } from '@nestjs/common';
 import request from 'supertest';
-import { Address } from '../../typeorm/entities/address.entity';
-import { Customer } from '../../typeorm/entities/customer.entity';
+import { Address } from '../../../../../shared/infra/typeorm/entities/address.entity';
+import { Customer } from '../../../../../shared/infra/typeorm/entities/customer.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CustomerRepository } from '../../typeorm/repositories/customers/customers.repository';
 

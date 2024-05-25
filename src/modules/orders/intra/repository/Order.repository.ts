@@ -1,10 +1,10 @@
 import { InjectRepository } from '@nestjs/typeorm';
 import { IRepositoryOrders } from '../../application/gateway/IRepository.orders';
 //import Orders from '../../domain/entity/order.entity';
-import { Coupon } from '../../../customers/infra/typeorm/entities/coupon.entity';
-import { Customer } from '../../../customers/infra/typeorm/entities/customer.entity';
+import { Coupon } from '../../../../shared/infra/typeorm/entities/coupon.entity';
+import { Customer } from '../../../../shared/infra/typeorm/entities/customer.entity';
 import { Repository } from 'typeorm';
-import { Orders } from '../../../customers/infra/typeorm/entities/order.entity';
+import { Orders } from '../../../../shared/infra/typeorm/entities/order.entity';
 
 class OrderRepository implements IRepositoryOrders {
   constructor(

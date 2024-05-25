@@ -9,9 +9,9 @@ const input = {
   total_value: 1,
   pay_value: 1,
   status: Status.AWAIT_PAYMENT,
-  id_product: [1],
   id_client: 1,
-  id_coupon: 1,
+  id_product: [1],
+  id_cupom: 1,
 };
 
 describe('CreateOrder Usecase', () => {
@@ -26,6 +26,9 @@ describe('CreateOrder Usecase', () => {
       total_value: 1,
       pay_value: 1,
       status: Status.AWAIT_PAYMENT,
+      id_client: 1,
+      id_product: [1],
+      id_cupom: 1,
     });
   });
 });

@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { Customer } from '../../entities/customer.entity';
-import { Address } from '../../entities/address.entity';
+import { Customer } from '../../../../../../shared/infra/typeorm/entities/customer.entity';
+import { Address } from '../../../../../../shared/infra/typeorm/entities/address.entity';
 import MockDate from 'mockdate';
 import { CustomerRepository } from './customers.repository';
 import { TypeOrmModule } from '@nestjs/typeorm';

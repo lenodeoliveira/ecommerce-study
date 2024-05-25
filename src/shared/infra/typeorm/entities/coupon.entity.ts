@@ -26,10 +26,10 @@ export class Coupon {
   type_coupon: string;
 
   @Column({ name: 'data_inicio_vigencia' })
-  start_date: Date;
+  start_date: string;
 
   @Column({ name: 'data_fim_vigencia' })
-  end_date: Date;
+  end_date: string;
 
   @Column({ name: 'disponibilidade' })
   availability: boolean;

@@ -1,13 +1,26 @@
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Customer } from '../../modules/customers/infra/typeorm/entities/customer.entity';
-import { Address } from '../../modules/customers/infra/typeorm/entities/address.entity';
+//import { Customer } from '../infra/typeorm/entities/customer.entity';
+//import { Address } from '../infra/typeorm/entities/address.entity';
+import * as path from 'path';
 
 export const TypeOrmSQLITETestingModule = () => [
   TypeOrmModule.forRoot({
-    type: 'sqlite',
+    type: 'better-sqlite3',
     database: ':memory:',
     dropSchema: true,
-    entities: [Customer, Address],
+    entities: [
+      path.resolve(
+        __dirname,
+        '..',
+        '..',
+        'shared',
+        '**',
+        'infra',
+        'typeorm',
+        'entities',
+        '*',
+      ),
+    ],
     synchronize: true,
   }),
 ];

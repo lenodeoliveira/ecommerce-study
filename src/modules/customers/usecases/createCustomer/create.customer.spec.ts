@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { CreateCustomerUseCase } from './create.customer.usecase';
-import { Customer } from '../../infra/typeorm/entities/customer.entity';
+import { Customer } from '../../../../shared/infra/typeorm/entities/customer.entity';
 import { CustomerDTO } from '../../dto/customer.dto';
 import { ICustomerRepository } from '../../infra/typeorm/interface/customers/ICustomers';
 import { ConflictException } from '@nestjs/common';
@@ -46,6 +46,7 @@ const outputCustomer = {
       updated_at: new Date(),
     },
   ],
+  orders: [],
   created_at: new Date(),
   updated_at: new Date(),
 };

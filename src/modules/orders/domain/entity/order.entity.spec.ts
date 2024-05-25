@@ -24,6 +24,9 @@ describe('Order entity', () => {
       total_value: 1,
       pay_value: 1,
       status: 'AGUARDANDO_PAGAMENTO',
+      id_client: 1,
+      id_product: [1],
+      id_cupom: 1,
     });
   });
 });

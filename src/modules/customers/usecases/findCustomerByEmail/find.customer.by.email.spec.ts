@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { FindCustomerByEmailUseCase } from './find.customer.by.email.usecase';
 import { CustomerRepository } from '../../infra/typeorm/repositories/customers/customers.repository';
-import { Customer } from '../../infra/typeorm/entities/customer.entity';
+import { Customer } from '../../../../shared/infra/typeorm/entities/customer.entity';
 import { CustomerDTO } from '../../dto/customer.dto';
 import { ICustomerRepository } from '../../infra/typeorm/interface/customers/ICustomers';
 
@@ -31,6 +31,7 @@ const outputCustomer = {
       updated_at: new Date(),
     },
   ],
+  orders: [],
   created_at: new Date(),
   updated_at: new Date(),
 };
