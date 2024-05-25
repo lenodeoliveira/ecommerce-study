@@ -42,7 +42,7 @@ class Address {
   readonly complement?: string;
 
   @ApiProperty({
-    type: Number,
+    type: String,
     example: 'brooklyn',
     description: 'Neighborhood where you live',
     required: true,

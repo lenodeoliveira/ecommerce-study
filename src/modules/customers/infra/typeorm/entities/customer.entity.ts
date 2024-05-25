@@ -6,6 +6,7 @@ import {
   UpdateDateColumn,
   OneToMany,
 } from 'typeorm';
+import { Orders } from './order.entity';
 import { Address } from './address.entity';
 
 @Entity('clientes')
@@ -27,6 +28,9 @@ export class Customer {
 
   @Column({ name: 'idade' })
   age: number;
+
+  @OneToMany(() => Orders, (orders) => orders.customers)
+  orders: Orders[];
 
   @OneToMany(() => Address, (address) => address.customer)
   address: Address[];

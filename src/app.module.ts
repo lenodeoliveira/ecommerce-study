@@ -6,6 +6,7 @@ import { AppService } from './app.service';
 import useFactory from './shared/infra/typeorm';
 import { TerminusModule } from '@nestjs/terminus';
 import { CustomersModule } from './modules/customers/customer.module';
+import { OrdersModule } from './modules/orders/orders.module';
 // eslint-disable-next-line
 const appPk = require('../package.json');
 
@@ -14,6 +15,7 @@ const appPk = require('../package.json');
     ConfigModule.forRoot(),
     TypeOrmModule.forRootAsync(useFactory),
     CustomersModule,
+    OrdersModule,
     TerminusModule,
   ],
   controllers: [AppController],
