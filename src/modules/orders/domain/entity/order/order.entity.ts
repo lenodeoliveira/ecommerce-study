@@ -1,5 +1,5 @@
-import Entity from '../../../../shared/entity/entity.abstract';
-import NotificationError from '../../../../shared/notification/notification.error';
+import Entity from '../../../../../shared/entity/entity.abstract';
+import NotificationError from '../../../../../shared/notification/notification.error';
 
 export enum Method {
   'CARD' = 'CARTAO',

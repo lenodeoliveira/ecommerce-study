@@ -1,4 +1,4 @@
-import Orders from 'src/modules/orders/domain/entity/order.entity';
+import Orders from 'src/modules/orders/domain/entity/order/order.entity';
 import { CreateOrderDTO, OutPutOrder } from './create.order.dto';
 import { Injectable } from '@nestjs/common';
 

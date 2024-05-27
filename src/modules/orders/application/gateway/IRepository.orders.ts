@@ -1,8 +1,6 @@
 //import Orders from '../../domain/entity/order.entity';
 
-interface IRepositoryOrders {
-  //createOrder(order: Orders): Promise<Orders>;
-  findAll(): Promise<unknown>;
-}
+import RepositoryInterface from 'src/shared/repository/repository.interface';
 
-export { IRepositoryOrders };
+export default interface IRepositoryOrders
+  extends RepositoryInterface<unknown> {}
